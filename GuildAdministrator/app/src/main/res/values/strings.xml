@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Guild Administrator</string>
+    <string name="label_email_main_activity">E-mail</string>
+    <string name="label_password_main_activity">Senha</string>
+    <string name="label_login_main_activity">Login</string>
+    <string name="label_forgot_password_main_activity">Esqueceu sua senha?</string>
+    <string name="label_clique_aqui">Clique aqui.</string>
+    <string name="label_keep_connected_main_activity">Manter conectado.</string>
+    <string name="label_button_register_main_activity">Não é cadastrado?</string>
+</resources>

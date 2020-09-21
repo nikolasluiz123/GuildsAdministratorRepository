@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_text_email_main_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/label_email_main_activity"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic__email_white_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit_text_main_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_edit_text_password_main_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/label_password_main_activity"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_email_main_activity"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_encryption_white_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text_main_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_login_main_activity"
+        style="@style/principal_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/label_login_main_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_main_activity" />
+
+    <CheckBox
+        android:id="@+id/checkbox_keep_connected"
+        style="@style/checkbox_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/label_keep_connected_main_activity"
+        app:layout_constraintBottom_toTopOf="@id/question_forgot_password"
+        app:layout_constraintEnd_toStartOf="@id/button_login_main_activity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/layout_edit_text_password_main_activity"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_main_activity" />
+
+    <TextView
+        android:id="@+id/question_forgot_password"
+        style="@style/text_view_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_forgot_password_main_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/checkbox_keep_connected"
+        app:layout_constraintTop_toBottomOf="@id/button_login_main_activity"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
+        android:id="@+id/text_button_forgot_password_main_activity"
+        style="@style/text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_clique_aqui"
+        app:layout_constraintBottom_toBottomOf="@id/question_forgot_password"
+        app:layout_constraintStart_toEndOf="@id/question_forgot_password"
+        app:layout_constraintTop_toTopOf="@id/question_forgot_password" />
+
+    <TextView
+        android:id="@+id/question_register"
+        style="@style/text_view_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_button_register_main_activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/question_forgot_password"
+        app:layout_constraintTop_toBottomOf="@id/question_forgot_password"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
+        android:id="@+id/text_button_register_main_activity"
+        style="@style/text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_clique_aqui"
+        app:layout_constraintBottom_toBottomOf="@id/question_register"
+        app:layout_constraintStart_toEndOf="@id/question_register"
+        app:layout_constraintTop_toTopOf="@id/question_register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
