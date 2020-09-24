@@ -16,5 +16,23 @@
 
     <string name="home_app_bar_title">Home</string>
     <string name="login_app_bar_title">Login</string>
-    <string name="notificacoes_app_bar_title">Notificações</string>
+    <string name="transport_app_bar_title">Transporte</string>
+    <string name="perfil_app_bar_title">Perfil</string>
+
+    <string name="menu_nav_drawer_label_home">Home</string>
+    <string name="menu_nav_drawer_label_title_profile">Perfil</string>
+    <string name="menu_nav_drawer_label_title_transport">Transporte</string>
+    <string name="menu_nav_drawer_label_customisations">Customizações</string>
+    <string name="menu_nav_drawer_label_events">Eventos</string>
+
+    <string name="titulo_temporario_fragment_home">Home fragment</string>
+    <string name="menu_nav_drawer_label_title_call_to_arms">Call to Arms</string>
+    <string name="menu_nav_drawer_label_administration">Administração</string>
+    <string name="menu_nav_drawer_label_title_rate_week">Taxa Semanal</string>
+    <string name="menu_nav_drawer_label_title_rate_collect">Taxa de Coleta</string>
+    <string name="menu_nav_drawer_label_title_regear">Regear</string>
+    <string name="menu_nav_drawer_label_notification">Notificações</string>
+    <string name="menu_nav_drawer_label_utilits">Utilitários</string>
+    <string name="menu_nav_drawer_label_title_collect_calculator">Calcular Taxa de Coleta</string>
+    <string name="menu_nav_drawer_label_title_request_regear">Requisitar Regear</string>
 </resources>

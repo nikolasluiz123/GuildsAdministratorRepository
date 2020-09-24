@@ -14,9 +14,16 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        replaceHomeFragment()
         configureToolbar()
         toggleDrawer()
         initializeDefaultFragment(savedInstanceState, 0)
+    }
+
+    private fun replaceHomeFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.home_frame_layout, HomeFragment())
+            .commit()
     }
 
     private fun configureToolbar() {
@@ -50,20 +57,32 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.nav_home -> {
+                replaceHomeFragment()
+                closeDrawer()
+            }
             R.id.notifications -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.home_frame_layout, NotificacoesFragment())
-                    .commit()
+                replaceNotificationsFragment()
                 closeDrawer()
             }
             R.id.profile -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.home_frame_layout, PerfilFragment())
-                    .commit()
+                replaceProfileFragment()
                 closeDrawer()
             }
         }
         return true
+    }
+
+    private fun replaceProfileFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.home_frame_layout, PerfilFragment())
+            .commit()
+    }
+
+    private fun replaceNotificationsFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.home_frame_layout, TransporteFragment())
+            .commit()
     }
 
     private fun closeDrawer() {

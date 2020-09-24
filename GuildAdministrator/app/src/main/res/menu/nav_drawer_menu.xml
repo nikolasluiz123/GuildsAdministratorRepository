@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
-    <group android:checkableBehavior="single">
+
+    <group>
         <item
-            android:id="@+id/profile"
-            android:icon="@drawable/ic_person_black_24dp"
-            android:title="Perfil" />
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic__home_black_24"
+            android:title="@string/menu_nav_drawer_label_home" />
+
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_notifications_black_24"
+            android:title="@string/menu_nav_drawer_label_notification" />
     </group>
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/notifications"
-            android:icon="@drawable/ic_baseline_notifications_black_24"
-            android:title="Notificações" />
-    </group>
+    <item android:title="@string/menu_nav_drawer_label_customisations">
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="@string/menu_nav_drawer_label_title_profile" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_nav_drawer_label_utilits">
+        <menu>
+            <item
+                android:id="@+id/collect_calculator"
+                android:icon="@drawable/ic_calculator_black_24"
+                android:title="@string/menu_nav_drawer_label_title_collect_calculator" />
+
+            <item
+                android:id="@+id/request_regear"
+                android:icon="@drawable/ic_armor_black_24"
+                android:title="@string/menu_nav_drawer_label_title_request_regear" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_nav_drawer_label_events">
+        <menu>
+            <item
+                android:id="@+id/notifications"
+                android:icon="@drawable/ic_transport_black_24"
+                android:title="@string/menu_nav_drawer_label_title_transport" />
+
+            <item
+                android:id="@+id/call_to_arms"
+                android:icon="@drawable/ic_sword_black_24"
+                android:title="@string/menu_nav_drawer_label_title_call_to_arms" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_nav_drawer_label_administration">
+        <menu>
+            <item
+                android:id="@+id/rate_week"
+                android:icon="@drawable/ic_money_black_24"
+                android:title="@string/menu_nav_drawer_label_title_rate_week" />
+
+            <item
+                android:id="@+id/rate_collect"
+                android:icon="@drawable/ic_pickaxe_black_24"
+                android:title="@string/menu_nav_drawer_label_title_rate_collect" />
+
+            <item
+                android:id="@+id/regear"
+                android:icon="@drawable/ic_armor_black_24"
+                android:title="@string/menu_nav_drawer_label_title_regear" />
+
+            <item
+                android:id="@+id/users_administration"
+                android:icon="@drawable/ic_users_black_24"
+                android:title="@string/menu_nav_drawer_label_title_regear" />
+        </menu>
+    </item>
 </menu>
