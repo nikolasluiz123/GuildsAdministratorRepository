@@ -2,59 +2,47 @@ package br.com.guildadministrator
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.FrameLayout
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    private var toolbar: Toolbar? = null
-    private var drawerLayout: DrawerLayout? = null
-    private var frameLayout: FrameLayout? = null
-    private var navigationView: NavigationView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        initializeViews()
+        configureToolbar()
         toggleDrawer()
         initializeDefaultFragment(savedInstanceState, 0)
     }
 
-    private fun initializeViews() {
-        toolbar = findViewById(R.id.toolbar_id)
-        toolbar!!.setTitle(R.string.toolbar_title)
-        setSupportActionBar(toolbar)
-        drawerLayout = findViewById(R.id.drawer_layout_id)
-        frameLayout = findViewById(R.id.framelayout_id)
-        navigationView = findViewById(R.id.navigationview_id)
-        navigationView!!.setNavigationItemSelectedListener(this)
+    private fun configureToolbar() {
+        setSupportActionBar(home_toolbar)
+        home_navigation_view.setNavigationItemSelectedListener(this)
     }
 
     private fun initializeDefaultFragment(savedInstanceState: Bundle?, itemIndex: Int) {
         if (savedInstanceState == null) {
-            val menuItem = navigationView!!.menu.getItem(itemIndex).setChecked(true)
+            val menuItem = home_navigation_view.menu.getItem(itemIndex).setChecked(true)
             onNavigationItemSelected(menuItem)
         }
     }
 
     private fun toggleDrawer() {
         val drawerToggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar,
+            this, home_container_drawer_layout, home_toolbar,
             R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
-        drawerLayout!!.addDrawerListener(drawerToggle)
+        home_container_drawer_layout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
     }
 
     override fun onBackPressed() {
-        if (drawerLayout!!.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout!!.closeDrawer(GravityCompat.START)
+        if (home_container_drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            home_container_drawer_layout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -64,7 +52,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.notifications -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.framelayout_id, NotificacoesFragment())
+                    .replace(R.id.home_frame_layout, NotificacoesFragment())
                     .commit()
                 closeDrawer()
             }
@@ -73,8 +61,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun closeDrawer() {
-        if (drawerLayout!!.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout!!.closeDrawer(GravityCompat.START)
+        if (home_container_drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            home_container_drawer_layout.closeDrawer(GravityCompat.START)
         }
     }
 
