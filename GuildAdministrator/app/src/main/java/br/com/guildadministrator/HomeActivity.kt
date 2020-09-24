@@ -56,6 +56,12 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .commit()
                 closeDrawer()
             }
+            R.id.profile -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.home_frame_layout, PerfilFragment())
+                    .commit()
+                closeDrawer()
+            }
         }
         return true
     }

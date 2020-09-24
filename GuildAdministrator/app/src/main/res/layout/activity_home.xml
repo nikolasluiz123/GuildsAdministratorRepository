@@ -28,7 +28,7 @@
                 android:elevation="4dp"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:popupTheme="@style/Theme.AppCompat.Light"
-                app:title="@string/home_toolbar_title" />
+                app:title="@string/home_app_bar_title" />
 
         </com.google.android.material.appbar.AppBarLayout>
 

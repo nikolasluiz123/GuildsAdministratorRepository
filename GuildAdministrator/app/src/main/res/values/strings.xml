@@ -1,16 +1,20 @@
 <resources>
     <string name="app_name">Guild Administrator</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <string name="label_ajuda">Ajuda</string>
     <string name="label_email_main_activity">E-mail</string>
     <string name="label_password_main_activity">Senha</string>
     <string name="label_login_main_activity">Login</string>
     <string name="label_forgot_password_main_activity">Esqueceu sua senha?</string>
-    <string name="label_clique_aqui">Clique aqui.</string>
     <string name="label_keep_connected_main_activity">Manter conectado.</string>
     <string name="label_button_register_main_activity">Não é cadastrado?</string>
-    <string name="hello_blank_fragment">Fragment de Notificações</string>
-    <string name="home_toolbar_title">Home</string>
-    <string name="navigation_drawer_open">Open Navigation Drawer</string>
-    <string name="navigation_drawer_close">Close Navigation Drawer</string>
-    <string name="label_ajuda">Ajuda</string>
+
+    <string name="label_clique_aqui">Clique aqui.</string>
+
+    <string name="home_app_bar_title">Home</string>
     <string name="login_app_bar_title">Login</string>
+    <string name="notificacoes_app_bar_title">Notificações</string>
 </resources>

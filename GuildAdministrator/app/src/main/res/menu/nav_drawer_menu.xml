@@ -5,6 +5,13 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Perfil" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
             android:id="@+id/notifications"
             android:icon="@drawable/ic_baseline_notifications_black_24"
             android:title="Notificações" />
