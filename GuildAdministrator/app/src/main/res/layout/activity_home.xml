@@ -31,7 +31,6 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <!-- Container for the rest of the screen - Below the Toolbar -->
         <FrameLayout
             android:id="@+id/framelayout_id"
             android:layout_width="match_parent"
@@ -39,7 +38,6 @@
 
     </LinearLayout>
 
-    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationview_id"
         android:layout_width="wrap_content"
