@@ -11,4 +11,6 @@
     <string name="toolbar_title">Notes App</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="label_ajuda">Ajuda</string>
+    <string name="login_app_bar_title">Login</string>
 </resources>

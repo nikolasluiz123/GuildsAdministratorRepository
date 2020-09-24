@@ -11,8 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title = "Adiministrador de Guilds Albion Online"
+        configureLoginButton()
+    }
 
+    private fun configureLoginButton() {
         button_login_main_activity.setOnClickListener { redirectToHome() }
     }
 
