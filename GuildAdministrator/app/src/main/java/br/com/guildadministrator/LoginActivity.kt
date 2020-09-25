@@ -12,6 +12,15 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         configureLoginButton()
+        configureForgotPasswordButton()
+    }
+
+    private fun configureForgotPasswordButton() {
+        text_button_forgot_password_login_activity.setOnClickListener { redirectToForgotPassword() }
+    }
+
+    private fun redirectToForgotPassword() {
+        startActivity(Intent(this, ForgotPasswordActivity::class.java))
     }
 
     private fun configureLoginButton() {

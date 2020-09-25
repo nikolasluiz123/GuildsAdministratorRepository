@@ -27,4 +27,13 @@
         <item name="android:textColor">@color/text_color</item>
     </style>
 
+    <style name="title_text_view_style">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="confirmation_dialog_theme" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="textAllCaps">false</item>
+    </style>
+
 </resources>

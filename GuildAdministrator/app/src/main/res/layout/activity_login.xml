@@ -24,7 +24,7 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:menu="@menu/top_app_bar_login_menu"
+                app:menu="@menu/app_bar_login_menu"
                 app:title="@string/login_app_bar_title" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -32,7 +32,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_text_email_main_activity"
+        android:id="@+id/layout_edit_text_email_login_activity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -44,7 +44,7 @@
         app:startIconDrawable="@drawable/ic__email_white_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_edit_text_main_activity"
+            android:id="@+id/email_edit_text_login_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -52,7 +52,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_edit_text_password_main_activity"
+        android:id="@+id/layout_edit_text_password_login_activity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -60,12 +60,12 @@
         app:hintAnimationEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_email_main_activity"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_email_login_activity"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_encryption_white_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text_main_activity"
+            android:id="@+id/password_edit_text_login_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -80,7 +80,7 @@
         android:layout_margin="8dp"
         android:text="@string/label_login_main_activity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_main_activity" />
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_login_activity" />
 
     <CheckBox
         android:id="@+id/checkbox_keep_connected"
@@ -92,8 +92,8 @@
         app:layout_constraintBottom_toTopOf="@id/question_forgot_password"
         app:layout_constraintEnd_toStartOf="@id/button_login_main_activity"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/layout_edit_text_password_main_activity"
-        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_main_activity" />
+        app:layout_constraintStart_toStartOf="@id/layout_edit_text_password_login_activity"
+        app:layout_constraintTop_toBottomOf="@id/layout_edit_text_password_login_activity" />
 
     <TextView
         android:id="@+id/question_forgot_password"
@@ -107,7 +107,7 @@
         app:layout_constraintVertical_bias="0.03" />
 
     <Button
-        android:id="@+id/text_button_forgot_password_main_activity"
+        android:id="@+id/text_button_forgot_password_login_activity"
         style="@style/text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         app:layout_constraintVertical_bias="0.03" />
 
     <Button
-        android:id="@+id/text_button_register_main_activity"
+        android:id="@+id/text_button_register_login_activity"
         style="@style/text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
